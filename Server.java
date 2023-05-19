@@ -4,6 +4,9 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.util.Collections;
+
+
 public class Server {
     private static final int PORT = 8888;
     private static final int MAX_PLAYERS = 2;
@@ -55,6 +58,7 @@ public class Server {
     }
 
     private void startGame() {
+        gameState.shuffleQuestions(); // Mélanger les questions
         while (!gameState.isGameOver()) {
             ClientHandler currentPlayer = clients.get(currentPlayerIndex);
             sendImagesToClients();
@@ -149,6 +153,28 @@ public class Server {
 
             currentImageIndex = 0;
         }
+
+        public void shuffleQuestions() {
+            List<Integer> indices = new ArrayList<>();
+            for (int i = 0; i < imagePaths.size(); i++) {
+                indices.add(i);
+            }
+            Collections.shuffle(indices);
+        
+            List<String> shuffledImagePaths = new ArrayList<>();
+            List<String> shuffledAnswers = new ArrayList<>();
+        
+            for (int index : indices) {
+                shuffledImagePaths.add(imagePaths.get(index));
+                shuffledAnswers.add(answers.get(index));
+            }
+        
+            imagePaths = shuffledImagePaths;
+            answers = shuffledAnswers;
+        
+            currentImageIndex = 0;
+        }
+        
 
         public String getCurrentImage() {
             return imagePaths.get(currentImageIndex);
