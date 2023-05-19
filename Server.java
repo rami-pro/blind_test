@@ -138,6 +138,15 @@ public class Server {
             imagePaths.add("C:/dev/TestProvisoirBT/blind_test/resources/mbappe.jpg");
             answers.add("mbappe");
 
+            imagePaths.add("C:/dev/TestProvisoirBT/blind_test/resources/modric.jpg");
+            answers.add("modric");
+
+            imagePaths.add("C:/dev/TestProvisoirBT/blind_test/resources/ronaldo.jpg");
+            answers.add("ronaldo");
+
+            imagePaths.add("C:/dev/TestProvisoirBT/blind_test/resources/neymar.jpg");
+            answers.add("neymar");
+
             currentImageIndex = 0;
         }
 
