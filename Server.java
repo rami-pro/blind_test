@@ -129,14 +129,14 @@ public class Server {
             imagePaths = new ArrayList<>();
             answers = new ArrayList<>();
 
-            // Add image paths and answers
-            imagePaths.add("/Users/ramigb/Desktop/test_res/resources/player1.jpg");
-            answers.add("Player 1");
+            imagePaths.add("C:/dev/TestProvisoirBT/blind_test/resources/pogba.jpg");
+            answers.add("pogba");
 
-            imagePaths.add("/Users/ramigb/Desktop/test_res/resources/player2.jpg");
-            answers.add("Player 2");
+            imagePaths.add("C:/dev/TestProvisoirBT/blind_test/resources/benzema.jpg");
+            answers.add("benzema");
 
-            // ... Add more image paths and answers as needed
+            imagePaths.add("C:/dev/TestProvisoirBT/blind_test/resources/mbappe.jpg");
+            answers.add("mbappe");
 
             currentImageIndex = 0;
         }
