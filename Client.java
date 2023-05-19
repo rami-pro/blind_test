@@ -93,7 +93,12 @@ public class Client extends JFrame {
 
         answerField = new JTextField(20);
         bottomPanel.add(answerField);
-
+        answerField.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                submitButton.doClick();
+            }
+        });
         submitButton = new JButton("Submit");
         submitButton.addActionListener(new ActionListener() {
             @Override
