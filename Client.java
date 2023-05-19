@@ -84,7 +84,7 @@ public class Client extends JFrame {
     }
 
     private void submitAnswer() {
-        String answer = answerField.getText();
+        String answer = answerField.getText().toLowerCase();
         if (!answer.isEmpty()) {
             sendMessage(new Message(MessageType.ANSWER, answer));
             answerField.setText("");
