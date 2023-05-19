@@ -55,7 +55,7 @@ public class Client extends JFrame {
 
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BorderLayout());
-        ImageIcon backgroundImage = new ImageIcon("/Users/gad/eclipse-workspace/blind_test/resources/parcDesPrinces.jpeg");
+        ImageIcon backgroundImage = new ImageIcon("resources/parcDesPrinces.jpeg");
         Image scaledImage = backgroundImage.getImage().getScaledInstance(800, 600, Image.SCALE_SMOOTH);
         backgroundImage = new ImageIcon(scaledImage);
         JLabel backgroundLabel = new JLabel(backgroundImage);

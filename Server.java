@@ -6,7 +6,6 @@ import java.util.List;
 
 import java.util.Collections;
 
-
 public class Server {
     private static final int PORT = 8889;
     private static final int MAX_PLAYERS = 2;
@@ -133,22 +132,22 @@ public class Server {
             imagePaths = new ArrayList<>();
             answers = new ArrayList<>();
 
-            imagePaths.add("C:/dev/TestProvisoirBT/blind_test/resources/pogba.jpg");
+            imagePaths.add("resources/pogba.jpg");
             answers.add("pogba");
 
-            imagePaths.add("C:/dev/TestProvisoirBT/blind_test/resources/benzema.jpg");
+            imagePaths.add("resources/benzema.jpg");
             answers.add("benzema");
 
-            imagePaths.add("C:/dev/TestProvisoirBT/blind_test/resources/mbappe.jpg");
+            imagePaths.add("resources/mbappe.jpg");
             answers.add("mbappe");
 
-            imagePaths.add("C:/dev/TestProvisoirBT/blind_test/resources/modric.jpg");
+            imagePaths.add("resources/modric.jpg");
             answers.add("modric");
 
-            imagePaths.add("C:/dev/TestProvisoirBT/blind_test/resources/ronaldo.jpg");
+            imagePaths.add("resources/ronaldo.jpg");
             answers.add("ronaldo");
 
-            imagePaths.add("C:/dev/TestProvisoirBT/blind_test/resources/neymar.jpg");
+            imagePaths.add("resources/neymar.jpg");
             answers.add("neymar");
 
             currentImageIndex = 0;
@@ -174,7 +173,6 @@ public class Server {
 
             currentImageIndex = 0;
         }
-
 
         public String getCurrentImage() {
             return imagePaths.get(currentImageIndex);
