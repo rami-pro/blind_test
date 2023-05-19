@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.List;
 
-public class Client extends JFrame {
+public class Client2 extends JFrame {
     private Socket socket;
     private BufferedReader reader;
     private PrintWriter writer;
@@ -22,7 +22,7 @@ public class Client extends JFrame {
     private Timer timer;
     private int remainingTime = 120;
 
-    public Client(String serverAddress, int serverPort) {
+    public Client2(String serverAddress, int serverPort) {
         try {
             socket = new Socket(serverAddress, serverPort);
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -130,7 +130,7 @@ public class Client extends JFrame {
     }
 
     private void submitAnswer() {
-        String answer = answerField.getText().toLowerCase();
+        String answer = answerField.getText();
         if (!answer.isEmpty()) {
             sendMessage(new Message(MessageType.ANSWER, answer));
             answerField.setText("");
@@ -196,7 +196,7 @@ public class Client extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                JOptionPane.showMessageDialog(Client.this, result);
+                JOptionPane.showMessageDialog(Client2.this, result);
             }
         });
     }
@@ -205,7 +205,7 @@ public class Client extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                JOptionPane.showMessageDialog(Client.this, "Game Over");
+                JOptionPane.showMessageDialog(Client2.this, "Game Over");
                 System.exit(0);
             }
         });
@@ -215,7 +215,7 @@ public class Client extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                JOptionPane.showMessageDialog(Client.this, "Scores:\n" + scores);
+                JOptionPane.showMessageDialog(Client2.this, "Scores:\n" + scores);
             }
         });
     }
@@ -242,7 +242,7 @@ public class Client extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new Client(serverAddress, serverPort);
+                new Client2(serverAddress, serverPort);
             }
         });
     }

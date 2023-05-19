@@ -8,7 +8,7 @@ import java.util.Collections;
 
 
 public class Server {
-    private static final int PORT = 8888;
+    private static final int PORT = 8889;
     private static final int MAX_PLAYERS = 2;
 
     private ServerSocket serverSocket;
@@ -160,21 +160,21 @@ public class Server {
                 indices.add(i);
             }
             Collections.shuffle(indices);
-        
+
             List<String> shuffledImagePaths = new ArrayList<>();
             List<String> shuffledAnswers = new ArrayList<>();
-        
+
             for (int index : indices) {
                 shuffledImagePaths.add(imagePaths.get(index));
                 shuffledAnswers.add(answers.get(index));
             }
-        
+
             imagePaths = shuffledImagePaths;
             answers = shuffledAnswers;
-        
+
             currentImageIndex = 0;
         }
-        
+
 
         public String getCurrentImage() {
             return imagePaths.get(currentImageIndex);
